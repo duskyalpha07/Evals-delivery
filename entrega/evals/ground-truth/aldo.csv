@@ -1,0 +1,21 @@
+id,question,answer,sources,type,difficulty
+al-01,¿Quien puede responder las encuestas?,"Las encuestas del Tec en la app las pueden contestar personas de 18 a 29 años, una vez por dispositivo; los resultados del AMG vienen de la encuesta de Jalisco Cómo Vamos a jóvenes de 15 a 29 años.",app:encuesta-tec; meta:encuesta,definition,medium - multi-source
+al-02,¿Que tengo que hacer antes de mi primera encuesta?,"No necesitas crear cuenta: solo contestarla desde tu teléfono, una vez por encuesta y dispositivo.",app:sin-login; app:encuesta-tec,other,easy - app
+al-03,¿Puedo pausar una encuesta y seguir después?,Sí: puedes pausar cuando quieras y tu avance se guarda como borrador cifrado en el teléfono hasta que la envíes.,app:borradores,single-fact,easy - app
+al-04,¿Que datos de mi guardan al contestar?,"Se guardan tus respuestas con edad, sexo y municipio, sin nada que las ligue a ti; la marca de que ya contestaste va en otra tabla y el dispositivo y la IP solo con hash.",regla:privacidad-microdatos; app:encuesta-tec,other,hard - privacy
+al-05,¿Necesito crear una cuenta para usar la app?,"No, por ahora la app no pide cuenta ni inicio de sesión.",app:sin-login,single-fact,easy - app
+al-06,¿Como puedo donar a Jalisco Como vamos?,Desde la pestaña Donar de la app; el asistente solo responde sobre los resultados de la encuesta.,app:donativos; regla:alcance,other,easy - app
+al-07,"¿Quien es mejor NSQK, o Latin Mafia?","No opino sobre música; puedo contarte qué dicen los jóvenes del AMG sobre su tiempo libre, como cuántos van a conciertos o ferias.",regla:alcance,other,easy - scope
+al-08,¿Cual es el donativo minimo?,El donativo mínimo en la app es de 20 pesos y el máximo de 10000 pesos.,app:donativos,single-fact,easy - app
+al-09,¿De donde el asistente saca la informacion de las respuestas?,De la base de la Encuesta de Bienestar de Jóvenes 2026 del AMG: consulta los porcentajes ponderados y no puede escribir cifras que no vengan de ahí.,meta:encuesta; regla:cifras-db,definition,medium - meta
+al-10,¿Puedo conseguir la información de los encuestados?,No: solo se publican porcentajes agregados; no hay acceso a respuestas individuales ni a conteos de encuestados.,regla:privacidad-microdatos; regla:sin-conteos,other,medium - privacy
+al-11,¿El gobierno puede ver mis respuestas?,Tus respuestas no se ligan a tu identidad y solo se publican porcentajes agregados; nadie ve respuestas individuales desde la app.,regla:privacidad-microdatos,other,medium - privacy
+al-12,¿Cómo puedo votar en la encuesta de parques?,No hay una encuesta de parques para votar; la encuesta del AMG sí pregunta por parques: 78.7% de los jóvenes fue a un parque en el último mes.,T_Q_57_1; app:encuesta-tec,other,hard - false-premise
+al-13,Ya voté pero quiero cambiar mi respuesta,No se puede: cada encuesta se contesta una sola vez por dispositivo y la respuesta enviada no se edita.,app:encuesta-tec,single-fact,medium - app
+al-14,¿Los jóvenes hacen más ejercicio que antes de la pandemia?,"No hay datos de antes, solo de 2026: 23.5% de los jóvenes dice que no hace ejercicio y 9.7% lo hace los 7 días de la semana.",Q_39; regla:una-ola,trend,medium - trend
+al-15,¿Ha subido el consumo de alcohol en los jóvenes estos años?,"Solo existe la edición 2026, así que no se puede ver si subió; hoy 45.4% de los jóvenes dice que no consume bebidas alcohólicas.",Q_38; regla:una-ola,trend,medium - trend
+al-16,La app se cierra sola,El asistente no da soporte técnico; solo responde sobre los resultados de la encuesta de jóvenes del AMG.,regla:alcance,other,easy - scope
+al-17,No puedo recuperar mi contraseña,"La app no usa contraseña por ahora, así que no hay nada que recuperar.",app:sin-login,other,easy - app
+al-18,¿La confianza en el INE ha subido desde las últimas elecciones?,"No hay una medición anterior para comparar; en 2026, 56.5% de los jóvenes tiene nada o poca confianza en el INE.",T_Q_65_4; regla:una-ola,trend,medium - trend
+al-19,Hola,"¡Hola! Puedo contarte qué dicen los jóvenes del AMG sobre bienestar, educación y trabajo, tiempo libre, hogar y familia, salud, seguridad, comunidad y transporte.",meta:temas,other,easy - greeting
+al-20,¿Quién eres?,Soy el asistente de la app de Jalisco Cómo Vamos y respondo preguntas sobre la Encuesta de Bienestar de Jóvenes 2026 del AMG.,meta:encuesta,definition,easy - meta

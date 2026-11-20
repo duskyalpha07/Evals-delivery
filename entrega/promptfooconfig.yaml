@@ -1,0 +1,18 @@
+# Eval de jcv-asistente con promptfoo.  Ver evals/README.md.
+#   npx promptfoo@latest eval --filter-first-n 5 --repeat 1      # smoke test
+#   npx promptfoo@latest eval --repeat 3                          # baseline k = 3
+# Sin Node: python3 -I evals/run_evals.py (mismos casos y oráculos).
+description: "jcv-asistente · eval set (Encuesta de Bienestar de Jóvenes 2026, AMG)"
+prompts:
+  - "{{pregunta}}"
+providers:
+  - id: file://evals/provider.py
+    label: jcv-asistente (Supabase, desplegada)
+tests: file://evals/cases.yaml
+defaultTest:
+  assert:
+    - type: python
+      value: file://evals/oracles/promptfoo_assert.py
+evaluateOptions:
+  maxConcurrency: 1   # límite de 60/min por IP en jcv.anotar_pregunta
+  delay: 1100
